@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto-5</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            background-color: rgb(13, 13, 105);
+            font-family: 'teko', sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .selecione {
+            position: absolute;
+            top: 230px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 25px;
+        }
+
+        .moeda {
+            position: absolute;
+            top: 300px;
+            left: 34%;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .moeda:active {
+            transform: translateY(5px);
+        }
+
+        .metro {
+            position: absolute;
+            top: 300px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .metro:active {
+            transform: translateY(5px);
+        }
+
+        .tempo {
+            position: absolute;
+            top: 300px;
+            left: 56%;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .tempo:active {
+            transform: translateY(5px);
+        }
+
+        .dolar {
+            position: absolute;
+            top: 350px;
+            left: 240px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .dolar:active {
+            transform: translateY(5px);
+        }
+
+        .pesos {
+            position: absolute;
+            top: 350px;
+            left: 340px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .pesos:active {
+            transform: translateY(5px);
+        }
+
+        .euro {
+            position: absolute;
+            top: 350px;
+            left: 440px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .euro:active {
+            transform: translateY(5px);
+        }
+
+        .kwanza {
+            position: absolute;
+            top: 350px;
+            left: 540px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .kwanza:active {
+            transform: translateY(5px);
+        }
+        
+
+        .yen {
+            position: absolute;
+            top: 350px;
+            left: 640px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .yen:active {
+            transform: translateY(5px);
+        }
+
+        .cm {
+            position: absolute;
+            top: 350px;
+            left: 240px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .cm:active {
+            transform: translate(5px);
+        }
+
+        .dc {
+            position: absolute;
+            top: 350px;
+            left: 340px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .dc:active {
+            transform: translate(5px);
+        }
+        
+        .dm {
+            position: absolute;
+            top: 350px;
+            left: 440px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .dm:active {
+            transform: translate(5px);
+        }
+
+        .hm {
+            position: absolute;
+            top: 350px;
+            left: 540px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .hm:active {
+            transform: translate(5px);
+        }
+
+        .km {
+            position: absolute;
+            top: 350px;
+            left: 640px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .km:active {
+            transform: translate(5px);
+        }
+
+        .seg {
+            position: absolute;
+            top: 350px;
+            left: 240px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .seg:active {
+            transform: translateY(5px);
+        }
+
+        .min {
+            position: absolute;
+            top: 350px;
+            left: 340px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white; 
+        }
+
+        .min:active {
+            transform: translateY(5px);
+        }
+
+        .days {
+            position: absolute;
+            top: 350px;
+            left: 440px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .days:active {
+            transform: translateY(5px);
+        }
+
+        .months {
+            position: absolute;
+            top: 350px;
+            left: 540px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .months:active {
+            transform: translateY(5px);
+        }
+
+        .years {
+            position: absolute;
+            top: 350px;
+            left: 640px;
+            height: 40px;
+            width: 90px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(121, 9, 9);
+            color: white;
+        }
+
+        .yers:active {
+            transform: translateY(5px);
+        }
+
+        .escrever {
+            position: absolute;
+            top: 400px;
+            left: 340px;
+            height: 40px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .okay {
+            position: absolute;
+            top: 400px;
+            left: 550px;
+            height: 40px;
+            width: 60px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: rgb(0, 171, 184);
+        }
+
+        .okay:active {
+            transform: translateY(5px);
+        }
+    </style>
+</head>
+<body>
+    <button class="selecione">Qual media você quer converter</button>
+    <button class="moeda" onclick="moeda()">MOEDA</button>
+    <button class="metro" onclick="metro()">METRO</button>
+    <button class="tempo" onclick="tempo()">TEMPO</button>
+    <div class="placemoeda" style="display: none;">
+        <button class="dolar"  onclick="dolar()">Dolar</button>
+        <button class="pesos"  onclick="pesos()">Pesos</button>
+        <button class="euro"  onclick="euro()">Euro</button>
+        <button class="kwanza"  onclick="kwanza()">Kwanza</button>
+        <button class="yen"  onclick="yen()">Yen</button>
+    </div>
+
+    <div class="placemetro" style="display: none;">
+        <button class="cm" onclick="cm()">Centímetro</button>
+        <button class="dc" onclick="dc()">Decímetro</button>
+        <button class="dm" onclick="dm()">Decâmetro</button>
+        <button class="hm" onclick="hm()">Hectômetro</button>
+        <button class="km" onclick="km()">Quilômetro</button>
+    </div>
+
+    <div class="placetempo" style="display: none;">
+        <button class="seg" onclick="seg()">Segundos</button>
+        <button class="min" onclick="min()">Minutos</button>
+        <button class="days" onclick="days()">dias</button>
+        <button class="months" onclick="months()">Mês</button>
+        <button class="years" onclick="yers()">Anos</button>
+    </div>
+
+    <div class="resposta" style="display: none;">
+        <input type="text" class="escrever" placeholder="Digite-Aqui">
+    </div>
+
+    <div class="ok" id="container">
+
+    </div>
+    <script>
+
+        var text = document.querySelector('.escrever').value.trim();
+        var number = parseInt(text)
+        function seg() {
+            var mostrar = document.querySelector(".resposta")
+            if (mostrar.style.display === "none") {
+                mostrar.style.display = "block"
+            }
+            var createButton = document.createElement("button");
+            var texto = document.createTextNode("Okay");
+            createButton.appendChild(texto);
+            createButton.classList.add("okay")
+            document.getElementById("container").appendChild(createButton)
+
+            createButton.onclick = function() {
+                var text = document.querySelector('.escrever').value.trim();
+                var number = parseInt(text)
+                var result = number / 3600
+                alert(result)
+                var esconder = document.querySelector(".okay");
+                esconder.style.display = "none"
+                var esconder1 = document.querySelector('.resposta')
+                esconder1.style.display = "none"
+            }
+        } 
+
+        function min() {
+            var mostrar = document.querySelector(".resposta")
+            if (mostrar.style.display === "none") {
+                mostrar.style.display = "block"
+            }
+            
+            var createButton = document.createElement("button");
+            var texto = document.createTextNode("Okay");
+            createButton.appendChild(texto);
+            createButton.classList.add("okay")
+            document.getElementById("container").appendChild(createButton)
+
+            createButton.onclick = function() {
+                var text = document.querySelector('.escrever').value.trim();
+                var number = parseInt(text)
+                var result = number / 60
+                alert(result)
+                var esconder = document.querySelector(".okay");
+                esconder.style.display = "none"
+                var esconder1 = document.querySelector('.resposta')
+                esconder1.style.display = "none"
+            }
+        }
+
+        function days() {
+            var mostrar = document.querySelector(".resposta")
+            if (mostrar.style.display === "none") {
+                mostrar.style.display = "block"
+            }
+
+            var createButton = document.createElement("button");
+            var texto = document.createTextNode("Okay");
+            createButton.appendChild(texto);
+            createButton.classList.add("okay")
+            document.getElementById("container").appendChild(createButton)
+
+            createButton.onclick = function() {
+                var text = document.querySelector('.escrever').value.trim();
+                var number = parseInt(text)
+                var result = number * 24;
+                alert(result)
+                var esconder = document.querySelector(".okay");
+                esconder.style.display = "none"
+                var esconder1 = document.querySelector('.resposta')
+                esconder1.style.display = "none"
+        }
+    }
+
+        function months() {
+            var mostrar = document.querySelector(".resposta")
+            if (mostrar.style.display === "none") {
+                mostrar.style.display = "block"
+            }
+
+            var createButton = document.createElement("button");
+            var texto = document.createTextNode("Okay");
+            createButton.appendChild(texto);
+            createButton.classList.add("okay")
+            document.getElementById("container").appendChild(createButton)
+
+            createButton.onclick = function() {
+                var text = document.querySelector('.escrever').value.trim();
+                var number = parseInt(text)
+                var result = number * 730;
+                alert(result)
+                var esconder = document.querySelector(".okay");
+                esconder.style.display = "none"
+                var esconder1 = document.querySelector('.resposta')
+                esconder1.style.display = "none"
+        }
+        }
+
+        function years() {
+            var mostrar = document.querySelector(".resposta")
+            if (mostrar.style.display === "none") {
+                mostrar.style.display = "block"
+            }
+
+            var createButton = document.createElement("button");
+            var texto = document.createTextNode("Okay");
+            createButton.appendChild(texto);
+            createButton.classList.add("okay")
+            document.getElementById("container").appendChild(createButton)
+
+            createButton.onclick = function() {
+                var text = document.querySelector('.escrever').value.trim();
+                var number = parseInt(text)
+                var result = number * 8766;
+                alert(result)
+                var esconder = document.querySelector(".okay");
+                esconder.style.display = "none"
+                var esconder1 = document.querySelector('.resposta')
+                esconder1.style.display = "none"
+        }
+        }
+
+        function cm() {
+            var mostrar = document.querySelector(".resposta")
+            if (mostrar.style.display === "none") {
+                mostrar.style.display = "block"
+            }
+
+            var createButton = document.createElement("button");
+            var texto = document.createTextNode("Okay");
+            createButton.appendChild(texto);
+            createButton.classList.add("okay")
+            document.getElementById("container").appendChild(createButton)
+
+            createButton.onclick = function() {
+                var text = document.querySelector('.escrever').value.trim();
+                var number = parseInt(text)
+                var result = number / 100;
+                alert(result)
+                var esconder = document.querySelector(".okay");
+                esconder.style.display = "none"
+                var esconder1 = document.querySelector('.resposta')
+                esconder1.style.display = "none"
+        }
+        }
+
+        function dc() {
+            var mostrar = document.querySelector(".resposta")
+            if (mostrar.style.display === "none") {
+                mostrar.style.display = "block"
+            }
+
+            var createButton = document.createElement("button");
+            var texto = document.createTextNode("Okay");
+            createButton.appendChild(texto);
+            createButton.classList.add("okay")
+            document.getElementById("container").appendChild(createButton)
+
+            createButton.onclick = function() {
+                var text = document.querySelector('.escrever').value.trim();
+                var number = parseInt(text)
+                var result = number / 10;
+                alert(result)
+                var esconder = document.querySelector(".okay");
+                esconder.style.display = "none"
+                var esconder1 = document.querySelector('.resposta')
+                esconder1.style.display = "none"
+        }
+        }
+
+        function dm() {
+            var mostrar = document.querySelector(".resposta")
+            if (mostrar.style.display === "none") {
+                mostrar.style.display = "block"
+            }
+
+            var createButton = document.createElement("button");
+            var texto = document.createTextNode("Okay");
+            createButton.appendChild(texto);
+            createButton.classList.add("okay")
+            document.getElementById("container").appendChild(createButton)
+
+            createButton.onclick = function() {
+                var text = document.querySelector('.escrever').value.trim();
+                var number = parseInt(text)
+                var result = number * 10;
+                alert(result)
+                var esconder = document.querySelector(".okay");
+                esconder.style.display = "none"
+                var esconder1 = document.querySelector('.resposta')
+                esconder1.style.display = "none"
+        }
+        }
+
+        function hm() {
+            var mostrar = document.querySelector(".resposta")
+            if (mostrar.style.display === "none") {
+                mostrar.style.display = "block"
+            }
+
+            var createButton = document.createElement("button");
+            var texto = document.createTextNode("Okay");
+            createButton.appendChild(texto);
+            createButton.classList.add("okay")
+            document.getElementById("container").appendChild(createButton)
+
+            createButton.onclick = function() {
+                var text = document.querySelector('.escrever').value.trim();
+                var number = parseInt(text)
+                var result = number * 100;
+                alert(result)
+                var esconder = document.querySelector(".okay");
+                esconder.style.display = "none"
+                var esconder1 = document.querySelector('.resposta')
+                esconder1.style.display = "none"
+        }
+        }
+
+        function km() {
+            var mostrar = document.querySelector(".resposta")
+            if (mostrar.style.display === "none") {
+                mostrar.style.display = "block"
+            }
+
+            var createButton = document.createElement("button");
+            var texto = document.createTextNode("Okay");
+            createButton.appendChild(texto);
+            createButton.classList.add("okay")
+            document.getElementById("container").appendChild(createButton)
+
+            createButton.onclick = function() {
+                var text = document.querySelector('.escrever').value.trim();
+                var number = parseInt(text)
+                var result = number * 1000;
+                alert(result)
+                var esconder = document.querySelector(".okay");
+                esconder.style.display = "none"
+                var esconder1 = document.querySelector('.resposta')
+                esconder1.style.display = "none"
+        }
+        }
+
+        function dolar() {
+            var mostrar = document.querySelector(".resposta")
+            if (mostrar.style.display === "none") {
+                mostrar.style.display = "block"
+            }
+
+            var createButton = document.createElement("button");
+            var texto = document.createTextNode("Okay");
+            createButton.appendChild(texto);
+            createButton.classList.add("okay")
+            document.getElementById("container").appendChild(createButton)
+
+            createButton.onclick = function() {
+                var text = document.querySelector('.escrever').value.trim();
+                var number = parseInt(text)
+                var result = number * 5.20;
+                alert(result)
+                var esconder = document.querySelector(".okay");
+                esconder.style.display = "none"
+                var esconder1 = document.querySelector('.resposta')
+                esconder1.style.display = "none"
+        }
+        }
+
+        function pesos() {
+            var mostrar = document.querySelector(".resposta")
+            if (mostrar.style.display === "none") {
+                mostrar.style.display = "block"
+            }
+
+            var createButton = document.createElement("button");
+            var texto = document.createTextNode("Okay");
+            createButton.appendChild(texto);
+            createButton.classList.add("okay")
+            document.getElementById("container").appendChild(createButton)
+
+            createButton.onclick = function() {
+                var text = document.querySelector('.escrever').value.trim();
+                var number = parseInt(text)
+                var result = number / 0.0059;
+                alert(result)
+                var esconder = document.querySelector(".okay");
+                esconder.style.display = "none"
+                var esconder1 = document.querySelector('.resposta')
+                esconder1.style.display = "none"
+        }
+        }
+
+        function euro() {
+            var mostrar = document.querySelector(".resposta")
+            if (mostrar.style.display === "none") {
+                mostrar.style.display = "block"
+            }
+
+            var createButton = document.createElement("button");
+            var texto = document.createTextNode("Okay");
+            createButton.appendChild(texto);
+            createButton.classList.add("okay")
+            document.getElementById("container").appendChild(createButton)
+
+            createButton.onclick = function() {
+                var text = document.querySelector('.escrever').value.trim();
+                var number = parseInt(text)
+                var result = number * 5.55;
+                alert(result)
+                var esconder = document.querySelector(".okay");
+                esconder.style.display = "none"
+                var esconder1 = document.querySelector('.resposta')
+                esconder1.style.display = "none"
+        }
+        }
+
+        function kwanza() {
+            var mostrar = document.querySelector(".resposta")
+            if (mostrar.style.display === "none") {
+                mostrar.style.display = "block"
+            }
+
+            var createButton = document.createElement("button");
+            var texto = document.createTextNode("Okay");
+            createButton.appendChild(texto);
+            createButton.classList.add("okay")
+            document.getElementById("container").appendChild(createButton)
+
+            createButton.onclick = function() {
+                var text = document.querySelector('.escrever').value.trim();
+                var number = parseInt(text)
+                var result = number / 0.0062;
+                alert(result)
+                var esconder = document.querySelector(".okay");
+                esconder.style.display = "none"
+                var esconder1 = document.querySelector('.resposta')
+                esconder1.style.display = "none"
+        }
+        }
+
+        function yen() {
+            var mostrar = document.querySelector(".resposta")
+            if (mostrar.style.display === "none") {
+                mostrar.style.display = "block"
+            }
+
+            var createButton = document.createElement("button");
+            var texto = document.createTextNode("Okay");
+            createButton.appendChild(texto);
+            createButton.classList.add("okay")
+            document.getElementById("container").appendChild(createButton)
+
+            createButton.onclick = function() {
+                var text = document.querySelector('.escrever').value.trim();
+                var number = parseInt(text)
+                var result = number / 0.033;
+                alert(result)
+                var esconder = document.querySelector(".okay");
+                esconder.style.display = "none"
+                var esconder1 = document.querySelector('.resposta')
+                esconder1.style.display = "none"
+        }
+        }
+
+
+        function aparecer() {
+            var digit = document.querySelector('.escrever')
+            if (digit.style.display === "none") {
+                digit.style.display = "block"
+            }
+        }
+
+
+        function moeda() {
+            var place = document.querySelector('.placemoeda')
+            if (place.style.display === "none") {
+                place.style.display = "block"
+            }
+        }
+
+        function metro() {
+            var place1 = document.querySelector('.placemetro')
+            if (place1.style.display === "none") {
+                place1.style.display = "block"
+            }
+        }
+
+        function tempo() {
+            var place = document.querySelector('.placetempo')
+            if (place.style.display === "none") {
+                place.style.display = "block"
+            }
+        }
+
+    </script>
+</body>
+</html>
